@@ -1,1 +1,19 @@
 @import "tailwindcss";
+
+@layer components {
+  body {
+    @apply bg-slate-800;
+  }
+  .buttons {
+    @apply grid grid-cols-4 gap-4 mt-4;
+  }
+  button {
+    @apply transition duration-300 active:transalte-x-1 text-x1;
+  }
+  .number {
+    @apply bg-slate-300 text-blue-700 rounded-lg p-2;
+  }
+  .operator {
+    @apply bg-clue-500 text-white rounded-lg p-2;
+  }
+}
