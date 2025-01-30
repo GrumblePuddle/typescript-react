@@ -1,19 +1,34 @@
 @import "tailwindcss";
 
-@layer components {
-  body {
-    @apply bg-slate-800;
-  }
-  .buttons {
-    @apply grid grid-cols-4 gap-4 mt-4;
-  }
-  button {
-    @apply transition duration-300 active:transalte-x-1 text-x1;
-  }
-  .number {
-    @apply bg-slate-300 text-blue-700 rounded-lg p-2;
-  }
-  .operator {
-    @apply bg-clue-500 text-white rounded-lg p-2;
-  }
+body {
+  background-color: #1e293b; /* bg-slate-800 */
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr)); /* grid-cols-4 */
+  gap: 1rem; /* gap-4 */
+  margin-top: 1rem; /* mt-4 */
+}
+
+button {
+  transition: all 0.3s; /* transition duration-300 */
+}
+
+button:active {
+  transform: translateX(0.25rem); /* active:translate-x-1 */
+}
+
+.number {
+  background-color: #cbd5e1; /* bg-slate-300 */
+  color: #1e40af; /* text-blue-700 */
+  border-radius: 0.5rem; /* rounded-lg */
+  padding: 0.5rem; /* p-2 */
+}
+
+.operator {
+  background-color: #3b82f6; /* bg-blue-500 */
+  color: #ffffff; /* text-white */
+  border-radius: 0.5rem; /* rounded-lg */
+  padding: 0.5rem; /* p-2 */
 }

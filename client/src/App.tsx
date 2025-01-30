@@ -3,7 +3,12 @@ import { useState } from "react";
 function App() {
   const [result, setResult] = useState<string>("");
 
-  const handleClick = (e) => setResult(result.concat(e.target.id));
+  interface ButtonClickEvent extends React.MouseEvent<HTMLButtonElement> {
+    target: HTMLButtonElement;
+  }
+
+  const handleClick = (e: ButtonClickEvent): void =>
+    setResult(result.concat(e.target.id));
 
   const clear = () => setResult("");
 
